@@ -20,7 +20,7 @@ public class BaseTest {
         driver = new DriverManager().initializeDriver();
         PageFactory.initElements(driver, this);
         extent = exm.GetExtent();
-        test = exm.createTest("Test", "By Kobi Balfunes");
+        test = exm.createTest("Test", "By Kobi Balfunes The King");
 
 
     }
