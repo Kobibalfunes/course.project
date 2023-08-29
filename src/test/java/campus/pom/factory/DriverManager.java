@@ -11,16 +11,11 @@ public class DriverManager {
 
         String browser = System.getProperty("browser");
 
-        switch (browser) {
-            case "CHROME":
-                driver = new ChromeDriver();
-                break;
-            case "FIREFOX":
-                driver = new FirefoxDriver();
-                break;
-            default:
-                throw new IllegalStateException("Invalid browser name " + browser);
-        }
+        driver = switch (browser) {
+            case "CHROME" -> new ChromeDriver();
+            case "FIREFOX" -> new FirefoxDriver();
+            default -> throw new IllegalStateException("Invalid browser name " + browser);
+        };
 
         driver.manage().window().setPosition(new Point(2000, 0));
         driver.manage().window().maximize();
