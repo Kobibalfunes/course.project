@@ -1,5 +1,8 @@
 package campus.pom.constant;
 
-public class Constants {
+public enum Constants {
+    CHROME,
+    FIREFOX,
+    EDGE
 
 }

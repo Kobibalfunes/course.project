@@ -81,4 +81,5 @@ public class HomePage extends BasePage {
         driver.findElement(resume).click();
         return this;
     }
+
 }
